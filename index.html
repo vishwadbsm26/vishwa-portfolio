@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vishwa Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(10px);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#ff3131;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff3131;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.hero h1{
+    font-size:75px;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:#ff3131;
+}
+
+.hero p{
+    font-size:28px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ff3131;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:18px;
+    transition:0.3s;
+    margin-top:20px;
+}
+
+.btn:hover{
+    background:#cc0000;
+    transform:scale(1.05);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:40px;
+    color:#ff3131;
+}
+
+/* ABOUT */
+
+.about{
+    background:#161616;
+}
+
+.about p{
+    text-align:center;
+    font-size:22px;
+    line-height:40px;
+    max-width:900px;
+    margin:auto;
+}
+
+/* SKILLS */
+
+.skills{
+    background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.skills-box{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.skill{
+    background:#1a1a1a;
+    padding:20px 40px;
+    border-radius:12px;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.skill:hover{
+    background:#ff3131;
+    transform:translateY(-8px);
+}
+
+/* PROJECTS */
+
+.projects{
+    background:#111;
+}
+
+.project-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.project{
+    width:320px;
+    background:#1b1b1b;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(255,49,49,0.5);
+}
+
+.project h3{
+    color:#ff3131;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.project p{
+    line-height:28px;
+    font-size:17px;
+}
+
+/* PROJECT DETAILS */
+
+.project-details{
+    background:#161616;
+}
+
+.details-box{
+    background:#1b1b1b;
+    padding:40px;
+    border-radius:20px;
+    max-width:1000px;
+    margin:auto;
+    line-height:35px;
+}
+
+.details-box h3{
+    color:#ff3131;
+    margin-top:20px;
+}
+
+.details-box ul{
+    margin-left:20px;
+    margin-top:15px;
+}
+
+.details-box img{
+    width:100%;
+    border-radius:15px;
+    margin-top:30px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:
+    linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+    url('https://images.unsplash.com/photo-1521791136064-7986c2920216');
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    text-align:center;
+}
+
+.contact p{
+    font-size:22px;
+    margin:15px 0;
+}
+
+.contact a{
+    color:#ff3131;
+    text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+    background:black;
+    text-align:center;
+    padding:25px;
+    font-size:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.title{
+    font-size:35px;
+}
+
+.project{
+    width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">VISHWA</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#gym">Gym Project</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Hi, I'm <span>Vishwa</span></h1>
+
+<p>DevOps Engineer & Web Developer</p>
+
+<a href="#contact" class="btn">
+Contact Me
+</a>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<h2 class="title">About Me</h2>
+
+<p>
+I am learning DevOps, Cloud Computing, Linux, Docker,
+Kubernetes and Web Development. I enjoy building modern
+websites and also learning digital marketing.
+</p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills">
+
+<h2 class="title">My Skills</h2>
+
+<div class="skills-box">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">PHP</div>
+<div class="skill">Git</div>
+<div class="skill">Linux</div>
+<div class="skill">Docker</div>
+<div class="skill">AWS</div>
+<div class="skill">Visual Studio</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="projects">
+
+<h2 class="title">Projects</h2>
+
+<div class="project-container">
+
+<div class="project">
+
+<h3>Gym Management System</h3>
+
+<p>
+Gym attendance and payment management system using PHP and MySQL.
+</p>
+
+<a href="#gym" class="btn">
+View Project
+</a>
+
+</div>
+
+<div class="project">
+
+<h3>Portfolio Website</h3>
+
+<p>
+Responsive personal portfolio website using HTML and CSS.
+</p>
+
+<a href="#" class="btn">
+Live Demo
+</a>
+
+</div>
+
+<div class="project">
+
+<h3>DevOps Practice</h3>
+
+<p>
+Learning Linux, Docker, GitHub, AWS and Kubernetes practically.
+</p>
+
+<a href="#" class="btn">
+View Learning
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GYM PROJECT DETAILS -->
+
+<section id="gym" class="project-details">
+
+<h2 class="title">Gym Management Project</h2>
+
+<div class="details-box">
+
+<h3>About Project</h3>
+
+<p>
+This Gym Management System is developed using PHP and MySQL.
+The project helps gym owners manage members, attendance,
+monthly payments and member records easily.
+</p>
+
+<h3>Features</h3>
+
+<ul>
+
+<li>Add Gym Members</li>
+<li>Attendance Management</li>
+<li>Payment Tracking</li>
+<li>Member Details Storage</li>
+<li>Monthly Fee Records</li>
+
+</ul>
+
+<h3>Technologies Used</h3>
+
+<ul>
+
+<li>HTML</li>
+<li>CSS</li>
+<li>PHP</li>
+<li>MySQL</li>
+
+</ul>
+
+<h3>Project Objective</h3>
+
+<p>
+The main objective of this project is to reduce manual work
+inside gym management and maintain all records digitally.
+</p>
+
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<p>Email: vishwasri658@gmail.com</p>
+
+<p>
+GitHub:
+<a href="https://github.com/vishwadbsm26/vishwa/" target="_blank">
+github.com/vishwa
+</a>
+</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/vishwa-s-4833763b0" target="_blank">
+linkedin.com/in/vishwa
+</a>
+</p>
+
+<a href="mailto:vishwasri658@gmail.com" class="btn">
+Send Email
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Vishwa | All Rights Reserved
+
+</footer>
+
+</body>
+</html>
